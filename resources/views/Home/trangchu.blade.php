@@ -87,7 +87,7 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ URL::asset('IMG/a.png') }}" alt="Slide 0">
+      <img src="{{ URL::asset('IMG/b.jpg') }}" alt="Slide 0">
     </div>
     <div class="carousel-item">
       <img src="{{ URL::asset('IMG/b.png') }}" alt="Slide 1">
@@ -115,7 +115,7 @@
 			<li><a href="#">Tìm người ở ghép phòng ốc sạch sẽ bao điện nước</a></li>
 			<li><a href="#">Phòng trọ cho thuê mới xây sạch sẽ có Camera an ninh Q.Gò vấp 		</a></li>
 			<li><a href="#">Phòng trọ  sinh viên ,an ninh tốt ,bao nước điện tính riêng 			</a></li>
-			<li><a href="#">Cho thuê mặt bằng quán 4m*10m .đường Đinh Tiên Hoàng,Quận.Bình Thạnh</a></li>
+			<li><a href="#">Cho thuê mặt bằng quán 4m*10m .Đường    Tiên Hoàng,Quận.Bình Thạnh</a></li>
    		</ul>
 	  	</div>
 	</div>
@@ -141,7 +141,7 @@
        @if($tl->level==1)
         <div class="col-md-6 mb-2">
           <div class="card w-100">
-            <img class="card-img-top" src="{{ URL::asset('IMG/a.png') }}" alt="Để nhà cho thuê như thế nào?">
+            <img class="card-img-top" src="{{asset($tl->hinhanh) }}" alt="Để nhà cho thuê như thế nào?">
               <div class="card-body">
                 <h5 class="card-title" style="color:#91192b">{{$tl->tieude }}</h5>
                 <h6 class="card-title">-Chủ nhà:{{$tl->tennguoidang }}</h6>
@@ -152,6 +152,7 @@
           </div>
          @endif 
     @endforeach
+    <div href="{{ URL::asset('IMG/nhachothue/a.png') }}"></div>
   </div>
 </div>
 
@@ -171,7 +172,7 @@
             <div class="card w-100">
                 <div class="row">
                   <div class="col-5">
-                    <img class="card-img-top" src="{{ URL::asset('IMG/a.jpg') }}" alt="Tìm người ở ghép?">
+                    <img class="card-img-top" src="{{asset($tl->hinhanh) }}" alt="Tìm người ở ghép?">
                   </div>
                   <div class="col">
                       <div class="card-body p-0">
@@ -208,7 +209,7 @@
           <div class="col-md-4 mb-2">
             <div class="card w-100">
               <a href="#">
-              <img class="card-img-top" src="{{ URL::asset('IMG/c.png') }}" alt="Nhà nguyên căn?">
+              <img class="card-img-top" src="{{asset($tl->hinhanh) }}" alt="Nhà nguyên căn?">
                 <div class="card-body">
                   <h5 class="card-title" style="color:#91192b">{{$tl->tieude }}</h5>
                   <h6 class="card-title">-Chủ nhà:{{$tl->tennguoidang }}</h6>
@@ -222,6 +223,7 @@
         @endforeach
         </div>
     </div>
+
 
     <div class="col-md-4">
         <div class="row mb-3">
@@ -238,7 +240,7 @@
                <div class="card w-100">
                 <div class="row">
                   <div class="col-5">
-                    <img class="card-img-top" src="{{ URL::asset('IMG/d.png') }}" alt="Cho thuê mặt bằng?">
+                    <img class="card-img-top" src="{{asset($tl->hinhanh) }}" alt="Cho thuê mặt bằng?">
                   </div>
                   <div class="col">
                     <div class="card-body p-0">
@@ -273,13 +275,13 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-4">
-              <img src="{{ URL::asset('IMG/b.png') }}" alt="Hình 0">
+              <img src="{{ URL::asset('IMG/matbang/14.jpg') }}" alt="Hình 0">
             </div>
             <div class="col-4">
-              <img src="{{ URL::asset('IMG/d.png') }}" alt="Hình 1">
+              <img src="{{ URL::asset('IMG/matbang/13.jpg') }}" alt="Hình 1">
             </div>
             <div class="col-4">
-              <img src="{{ URL::asset('IMG/g.png') }}g" alt="Hình 2">
+              <img src="{{ URL::asset('IMG/matbang/14.jpg') }}" alt="Hình 2">
             </div>
           </div>
         </div>

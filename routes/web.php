@@ -32,7 +32,7 @@ use Illuminate\Http\Request;
 	});
 
 
-//user
+//Home
 	 Route::group(['prefix'=>'Home'],function(){
 	 	Route::get('/banggiadichvu','Controller_Home@banggiadichvu');
 	 	Route::get('/chothuematbang','Controller_Home@chothuematbang');
@@ -45,25 +45,28 @@ use Illuminate\Http\Request;
 	 	Route::get('/thanhtoan','Controller_Home@thanhtoan');
 	 	Route::get('/timnguoioghep','Controller_Home@timnguoioghep');
 	 	Route::get('/trangchu','Controller_Home@trangchu2');
+	 
 	 });
 
+	Route::get('/Home/dangbai','Controller_Home@create');
+	Route::post('/Home/show','Controller_Home@store');
 
 
 
 	Route::get('Home/ok',function(){	
-	 for($i=0;$i<1;$i++)
+	 for($i=0;$i<2;$i++)
 	 {	
 		$baiviet=new App\baiviet();
-		$baiviet ->level=3;
+		$baiviet ->level=4;
 		$baiviet ->tennguoidang="	Huy Cường";
 		$baiviet ->sodienthoai="0339672794";
-		$baiviet ->tieude="Phòng trọ Gò vấp Full nội thất - Nhà mới xây - Giá 2,5tr";
+		$baiviet ->tieude="Mặt bằng cho thuê Full nội thất - Nhà mới xây - Giá 18,5tr";
 		$baiviet ->sonha="15/29";
 		$baiviet ->tenduong="Đường C1,";
 		$baiviet ->phuong="Phường 13";
 		$baiviet ->quan="Quận Tân Bình";
-		$baiviet ->dientich="20m²";
-		$baiviet ->giatien="2.5 triệu/tháng";
+		$baiviet ->dientich="30m²";
+		$baiviet ->giatien="18.5 triệu/tháng";
 		$baiviet ->noidung="VỊ TRÍ:
 
 + Nằm ngay đường Cộng Hòa, Cách ETOWN 300m, gần khu chợ Hoàng Hoa Thám, các cửa hàng tiện ích ( Family Mart, Vinmart …), Thế Giới Di Động, Điện Máy Xanh
@@ -81,10 +84,3 @@ use Illuminate\Http\Request;
 	 }
 	});
 
-
-
-	Route::get('Home/show',function(){	
-		$ok= App\ok::where('ten','iphone6')->get()->toArray();
-		var_dump($ok);
-		echo $ok[0]['ten'];
-	});

@@ -61,6 +61,9 @@
                   </li>  
                   <li class="nav-item">
                      <a class="nav-link" href="{{ URL::asset('Home/banggiadichvu') }} ">Bảng giá |</a>
+                  </li>   
+                  <li class="nav-item">
+                     <a class="nav-link" href="{{ URL::asset('Home/dangbai') }} ">Đăng bài |</a>
                   </li>       
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHoatDong" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

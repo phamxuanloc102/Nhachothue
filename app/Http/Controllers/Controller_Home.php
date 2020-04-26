@@ -26,6 +26,12 @@ class Controller_Home extends Controller
         return view('/Home/trangchu',['baiviet'=>$baiviet]);
     }
 
+    
+
+    public function dangbai(){
+        return view('/Home/dangbai');
+    }
+
      public function banggiadichvu(){
        return view ('/Home/banggiadichvu',['name'=>'bảng giá dịch vụ']);
     }
@@ -83,6 +89,7 @@ class Controller_Home extends Controller
     public function create()
     {
         //
+        return view('/Home/dangbai');
     }
 
     /**
@@ -94,6 +101,20 @@ class Controller_Home extends Controller
     public function store(Request $request)
     {
         //
+        $baiviet = new baiviet;
+        $baiviet->tenguoidang = $request->tenguoidang; 
+        $baiviet->sodienthoai = $request->sodienthoai;
+        $baiviet->tieude = $request->tieude;
+        $baiviet->sonha = $request->sonha;
+        $baiviet->tenduong = $request->tenduong;
+        $baiviet->phuong = $request->phuong;
+        $baiviet->quan = $request->quan;
+        $baiviet->dientich = $request->dientich;
+        $baiviet->giatien = $request->giatien;
+        $baiviet->noidung = $request->noidungn;
+        $baiviet->hinhanh = $request->hinhanh;
+        $baiviet->save();
+        return redirect()->action('/Home/Controller_Home@create');
     }
 
     /**
